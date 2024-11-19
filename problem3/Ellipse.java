@@ -1,11 +1,16 @@
 package problem3;
 
+// ellipse is a subclass of Shape 
 public class Ellipse extends Shape{
+    // assign attributes specific to Ellipse 
     private double majorAxis;
     private double minorAxis;
 
+    // constructor 
     public Ellipse(double a, double b){
-        super("Ellipse");
+        super("Ellipse"); // update name from super 
+
+        // ensure a is greater than or equal to b 
         if(a >= b){
             this.majorAxis = a;
             this.minorAxis = b;
@@ -15,6 +20,9 @@ public class Ellipse extends Shape{
         }
     }
 
+    // methods 
+
+    // calculate perimeter 
     @Override
     public double getPerimeter(){
         return Math.PI * 
@@ -23,6 +31,7 @@ public class Ellipse extends Shape{
         (majorAxis + 3 * minorAxis)));
     }
 
+    // calculate area 
     @Override
     public double getArea(){
         return Math.PI * majorAxis * minorAxis;
