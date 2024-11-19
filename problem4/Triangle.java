@@ -28,4 +28,11 @@ public class Triangle extends Shape{
         double s = getPerimeter() / 2;
         return Math.sqrt(s * (s = side1) * (s - side2) * (s - side3));
     }
+
+    @Override
+    public void scale(double factor){
+        this.side1 *= factor;
+        this.side2 *= factor;
+        this.side3 *= factor;
+    }
 }

@@ -27,4 +27,10 @@ public class Ellipse extends Shape{
     public double getArea(){
         return Math.PI * majorAxis * minorAxis;
     }
+
+    @Override 
+    public void scale(double factor){
+        this.majorAxis *= factor;
+        this.minorAxis *= factor;
+    }
 }

@@ -17,4 +17,9 @@ public class Circle extends Shape{
     public double getArea(){
         return Math.PI * radius * radius;
     }
+
+    @Override
+    public void scale(double factor){
+        this.radius *= factor;
+    }
 }
